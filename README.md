@@ -1,5 +1,5 @@
 Sentinel
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** React, TypeScript
 - **Backend:** Node.js, Express, TypeScript

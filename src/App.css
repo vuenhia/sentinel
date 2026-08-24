@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Main */
+
+/* Sentinel */
+.sentinel {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.main {
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+	padding-top: 3rem;
+}
+/* Header */
+.header {
+	display: flex;
+	justify-content: space-between;
+}
+/* Endpoint */
+.endpoint {
+	line-height: 35px;
+}
+.endpoint-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.endpoint-main {
+}
+
+/* EndpointHeader.tsx */
+.epHeader-api-input {
+	display: flex;
+	gap: 5px;
+}
+.epHeader-save {
+	min-width: 200px;
+}
+.epHeader-method-option {
+	min-width: 200px;
+}
+.epHeader-url {
+	flex: 1;
+	min-height: 50px;
+}
+
+.endpoint-apis-information {
+	display: flex;
+	justify-content: space-between;
+}
+.endpoint-apis-information-left {
+}
+.endpoint-apis-information-right {
+	display: flex;
+	gap: 20px;
+}

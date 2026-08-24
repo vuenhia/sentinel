@@ -1,76 +1,44 @@
-# React + TypeScript + Vite
+Sentinel
+## 🛠️ Tech Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **Frontend:** React, TypeScript
+- **Backend:** Node.js, Express, TypeScript
+- **Database:** PostgreSQL
+- **Testing:** Vitest, Playwright
+- **CI/CD:** GitHub Actions
 
-Currently, two official plugins are available:
+  
+An api tracker tracking api endpoints, monitor their health, and detect reliability issues.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Roadmap
 
-## React Compiler
+### v0.1 — Tracking
+- [] Register API endpoints
+- [] Store endpoint information
+- [] Manually check endpoint health
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### v0.2 — Monitoring
+- [] Automatically poll registered endpoints
+- [] Track response times and status codes
+- [] Record health history
 
-## Expanding the ESLint configuration
+### v0.3 — Visibility
+- [] Build a monitoring dashboard
+- [] Display endpoint health and response history
+- [] Surface failures and performance changes
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### v0.4 — Intelligence
+- [] Detect incidents
+- [] Identify regressions and unusual behavior
+- [] Correlate endpoint failures with monitoring data
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### v0.5 — Reliability
+- []Add unit and integration tests with Vitest
+- []Add end-to-end tests with Playwright
+- []Set up CI/CD with GitHub Actions
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-# sentinel
+(GOAL)
+### v1.0 — AI Explanation
+- []Generate incident summaries using an LLM
+- []Ground explanations in actual monitoring evidence
+- []Explain what happened, why it may have happened, and what evidence supports the conclusion

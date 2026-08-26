@@ -1,5 +1,7 @@
 export type APIEndpoint = {
 	url: string;
+	status: string;
+	latency: number;
 };
 export type EndpointHeaderProps = {
 	apiUrl: string;
@@ -8,7 +10,9 @@ export type EndpointHeaderProps = {
 };
 export type EndpointListProps = {
 	endpoints: APIEndpoint[];
+	checkStatus: (endpoint: APIEndpoint) => void;
 };
 export type EndpointRowProps = {
 	endpoint: APIEndpoint;
+	checkStatus: (endpoint: APIEndpoint) => void;
 };

@@ -26,6 +26,15 @@ export default function Endpoint() {
 		try {
 			const response = await fetch(endpoint.url);
 			console.log(response.status);
+			setEndpoints((prevEndpoint) =>
+				prevEndpoint.map((targetedEndpoint) => {
+					if (targetedEndpoint.url == endpoint.url) {
+						return { ...targetedEndpoint, status: "Checked" };
+					} else {
+						return targetedEndpoint;
+					}
+				}),
+			);
 		} catch (error) {
 			console.log("cannot fetch url", error + "number");
 		}

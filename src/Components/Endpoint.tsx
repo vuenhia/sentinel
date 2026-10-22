@@ -6,15 +6,18 @@ import type { APIEndpoint } from "../types";
 export default function Endpoint() {
 	const [apiUrl, setApiUrl] = useState("");
 	const [endpoints, setEndpoints] = useState<APIEndpoint[]>([]);
+	const [name, setName] = useState("");
 
 	const handleClick = () => {
 		const newEndpoints = {
 			url: apiUrl,
+			name: name,
 			status: "Not Checked",
 			latency: 0,
 		};
 		setEndpoints((prevEndpoints) => [...prevEndpoints, newEndpoints]);
 		setApiUrl("");
+		setName("");
 		console.log(newEndpoints);
 	};
 	const handleUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,6 +25,10 @@ export default function Endpoint() {
 		setApiUrl(typedValue);
 	};
 
+	const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const typedValue = e.target.value;
+		setName(typedValue);
+	};
 	const checkStatus = async (endpoint: APIEndpoint) => {
 		try {
 			const response = await fetch(endpoint.url);
@@ -45,6 +52,8 @@ export default function Endpoint() {
 				apiUrl={apiUrl}
 				handleClick={handleClick}
 				handleUrlChange={handleUrlChange}
+				handleNameChange={handleNameChange}
+				name={name}
 			/>
 			<EndpointList endpoints={endpoints} checkStatus={checkStatus} />
 		</div>

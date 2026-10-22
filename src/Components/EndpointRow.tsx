@@ -10,6 +10,7 @@ export default function EndpointRow({
 			</div>
 
 			<div className="endpoint-apis-information-right">
+				<p>{endpoint.name}</p>
 				<p>{endpoint.latency}</p>
 				<p>{endpoint.status}</p>
 				<button onClick={() => checkStatus(endpoint)}>Check Status</button>

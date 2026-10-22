@@ -4,6 +4,8 @@ export default function EndpointHeader({
 	apiUrl,
 	handleClick,
 	handleUrlChange,
+	handleNameChange,
+	name,
 }: EndpointHeaderProps) {
 	return (
 		<div className="epHeader">
@@ -15,6 +17,13 @@ export default function EndpointHeader({
 					placeholder="New API"
 					onChange={handleUrlChange}
 					value={apiUrl}
+				/>
+				<input
+					className="epHeader-url"
+					type="text"
+					placeholder="Name"
+					onChange={handleNameChange}
+					value={name}
 				/>
 				<button className="epHeader-save" onClick={handleClick}>
 					POST

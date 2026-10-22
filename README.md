@@ -13,9 +13,9 @@ An api tracker tracking api endpoints, monitor their health, and detect reliabil
 ## Roadmap
 
 ### v0.1 — Tracking
-- [] Register API endpoints
+- [x] Register API endpoints
 - [] Store endpoint information
-- [] Manually check endpoint health
+- [x] Manually check endpoint health
 
 ### v0.2 — Monitoring
 - [] Automatically poll registered endpoints

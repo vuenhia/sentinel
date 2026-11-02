@@ -51,6 +51,7 @@
 	min-height: 50px;
 }
 
+/* EndpointRow.tsx */
 .endpoint-apis-information {
 	display: flex;
 	justify-content: space-between;
@@ -60,4 +61,26 @@
 .endpoint-apis-information-right {
 	display: flex;
 	gap: 20px;
+}
+
+.endpoint-buttons {
+	display: flex;
+	gap: 5px;
+}
+
+/* Latency */
+.latency-green {
+	color: #16a34a;
+}
+
+.latency-yellow {
+	color: #ca8a04;
+}
+
+.latency-red {
+	color: #dc2626;
+}
+
+.latency-none {
+	color: #6b7280;
 }

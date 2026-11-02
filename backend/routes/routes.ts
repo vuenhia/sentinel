@@ -2,15 +2,17 @@ import { Router } from "express";
 import {
 	getEndpoints,
 	createEndpoint,
-	deleteEndpoint,
 	updateEndpoint,
+	deleteEndpoint,
+	checkEndpoint,
 } from "../controllers/controller";
 
 const router = Router();
 
 router.get("/", getEndpoints);
 router.post("/", createEndpoint);
-router.delete("/:id", deleteEndpoint);
 router.patch("/:id", updateEndpoint);
+router.delete("/:id", deleteEndpoint);
+router.post("/:id/check", checkEndpoint);
 
 export default router;

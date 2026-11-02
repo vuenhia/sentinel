@@ -3,6 +3,8 @@ import type { EndpointListProps } from "../types";
 export default function EndpointList({
 	endpoints,
 	checkStatus,
+	handleEdit,
+	handleDelete,
 }: EndpointListProps) {
 	return (
 		<div className="endpoint-main">
@@ -13,6 +15,8 @@ export default function EndpointList({
 					key={endpoint.url}
 					endpoint={endpoint}
 					checkStatus={checkStatus}
+					handleEdit={handleEdit}
+					handleDelete={handleDelete}
 				/>
 			))}
 		</div>
